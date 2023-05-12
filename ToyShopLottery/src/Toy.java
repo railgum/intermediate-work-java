@@ -9,10 +9,25 @@ public class Toy {
     }
 
     public Toy(String name, int amount, int weigthPrize) {
-        this.id = countId;
+        this.id = countId++;
         this.name = name;
         this.amount = amount;
         this.weigthPrize = weigthPrize;
     }
 
+    public void setWeigthPrize(String weigthPrize){
+        this.weigthPrize = weigthPrize;
+    }
+
+    public int getWeigthPrize() {
+        return weigthPrize;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
 }
