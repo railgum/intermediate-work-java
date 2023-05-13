@@ -1,4 +1,4 @@
-public class Toy {
+public class Toy implements Comparable<Toy> {
     private final int id;
     private String name;
     private int amount;
@@ -9,7 +9,7 @@ public class Toy {
     }
 
     public Toy(String name, int amount, int weightPrize) {
-        this.id = countId++;
+        this.id = ++countId;
         this.name = name;
         this.amount = amount;
         this.weightPrize = weightPrize;
@@ -46,7 +46,11 @@ public class Toy {
     @Override
     public String toString(){
         return "Название игрушки: " + getName() +
-                "\n Количество: " + getAmount() +
-                "\n ID: " + getId();
+                "\nКоличество: " + getAmount() +
+                "\nID: " + getId();
+    }
+    @Override
+    public int compareTo(Toy toy){
+        return this.getId();
     }
 }
