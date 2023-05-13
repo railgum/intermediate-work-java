@@ -23,10 +23,12 @@ public class Change implements Changeable<Toy> {
                         case "1":
                             System.out.println("Введите новое количество");
                             toy.setAmount(Integer.parseInt(bufferedReader.readLine()));
+                            isExit = true;
                             break;
                         case "2":
                             System.out.println("Введите новый вес");
                             toy.setWeightPrize(Integer.parseInt(bufferedReader.readLine()));
+                            isExit = true;
                             break;
                         case "0":
                             isExit = true;

@@ -46,8 +46,9 @@ public class Toy implements Comparable<Toy> {
     @Override
     public String toString(){
         return "Название игрушки: " + getName() +
+                "\nID: " + getId() +
                 "\nКоличество: " + getAmount() +
-                "\nID: " + getId();
+                "\nВес: " + getWeightPrize();
     }
     @Override
     public int compareTo(Toy toy){

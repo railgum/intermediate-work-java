@@ -8,6 +8,7 @@ public class View {
     private final Add add;
     private final Change change;
 
+
     public View(BufferedReader scanner,
                 ListMenu table,
                 ListToys listToys,
@@ -30,6 +31,11 @@ public class View {
                 case "2":
                     change.changeBy(scanner);
                     break;
+                case "3":
+                    listToys.add(add.addNewToy());
+                    break;
+                case "4":
+
                 case "0":
                     System.exit(0);
                 default:
