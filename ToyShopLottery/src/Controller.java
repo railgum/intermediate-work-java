@@ -27,8 +27,9 @@ public class Controller {
             ListMenu table = new ListMenu(scanner);
             Add add = new Add(scanner);
             Change change = new Change(listToys,table);
+            PrizeDraw prize = new PrizeDraw(listToys);
 
-            View viewInfo = new View(scanner,table,listToys,add,change);
+            View viewInfo = new View(scanner,table,listToys,add,change,prize);
             viewInfo.printInfo();
         }
 }

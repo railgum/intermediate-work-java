@@ -7,18 +7,21 @@ public class View {
     private final ListToys listToys;
     private final Add add;
     private final Change change;
+    private final PrizeDraw listPrize;
 
 
     public View(BufferedReader scanner,
                 ListMenu table,
                 ListToys listToys,
                 Add add,
-                Change change) {
+                Change change,
+                PrizeDraw listPrize) {
         this.scanner = scanner;
         this.table = table;
         this.listToys = listToys;
         this.add = add;
         this.change = change;
+        this.listPrize = listPrize;
     }
     public void printInfo() throws IOException {
         while (true){
@@ -35,7 +38,7 @@ public class View {
                     listToys.add(add.addNewToy());
                     break;
                 case "4":
-
+                    listPrize.printPrize(listToys);
                 case "0":
                     System.exit(0);
                 default:
