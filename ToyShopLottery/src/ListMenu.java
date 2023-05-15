@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class ListMenu {
-    private BufferedReader scanner;
+    private final BufferedReader scanner;
 
     public ListMenu(BufferedReader scanner) {
         this.scanner = scanner;

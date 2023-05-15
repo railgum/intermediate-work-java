@@ -1,3 +1,3 @@
 public interface SpinWheel {
-    void printPrize(ListToys listToys);
+    ListToys printPrize(ListToys listToys);
 }

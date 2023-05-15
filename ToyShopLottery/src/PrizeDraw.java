@@ -4,16 +4,16 @@ import java.util.*;
 
 // Класс розыгрыша игрушек
 public class PrizeDraw implements SpinWheel {
-    private ListToys listToys;
-    private ListPrize listPrize;
+    private final ListToys listToys;
+    private final ListPrize listPrize;
     public PrizeDraw(ListToys listToys) {
         this.listToys = listToys;
         this.listPrize = new ListPrize();
     }
 //    Путь сохранения файла призовых игрушек
-    private String path = "X:\\Geek\\Developer\\2_block\\Intermediate_works\\intermediate-work-java\\ToyShopLottery\\src\\Prize";
+    private final String path = "X:\\Geek\\Developer\\2_block\\Intermediate_works\\intermediate-work-java\\ToyShopLottery\\src\\Prize";
     @Override
-    public void printPrize(ListToys listToys) {
+    public ListToys printPrize(ListToys listToys) {
         Random random = new Random();
         int rndNum = random.nextInt(100);
         for (Toy toy : listToys.getToys()) {
@@ -31,11 +31,17 @@ public class PrizeDraw implements SpinWheel {
         catch(IOException ex){
             System.out.println(ex.getMessage());
         }
-        for (Toy toy : listToys.getToys()) {
-            if(toy.getName() == prizeToy.getName()){
-                toy.setAmount(toy.getAmount()-1);
 
+        Iterator<Toy> iterator = listToys.getToys().iterator();
+        while (iterator.hasNext()){
+            Toy toy = iterator.next();
+            if(toy.getName().equals(prizeToy.getName())){
+                toy.setAmount(toy.getAmount()-1);
+            }
+            if(toy.getAmount()<1){
+                iterator.remove();
             }
         }
+        return listToys;
     }
 }

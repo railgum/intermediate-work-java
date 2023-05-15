@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class ListToys implements Printable {
-    private List<Toy> toys;
+    private final List<Toy> toys;
     public ListToys(){
         this.toys = new ArrayList<>();
     }

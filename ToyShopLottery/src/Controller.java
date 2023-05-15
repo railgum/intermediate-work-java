@@ -4,13 +4,13 @@ import java.io.InputStreamReader;
 
 public class Controller {
         public static void updateView() throws IOException {
-            Toy toy1 = new Toy("Робот", 10, 60);
-            Toy toy2 = new Toy("Медведь", 1, 20);
-            Toy toy3 = new Toy("Утка", 7, 74);
-            Toy toy4 = new Toy("Конструктор", 3, 82);
-            Toy toy5 = new Toy("Кукла Барби", 8, 35);
-            Toy toy6 = new Toy("Лото", 4, 48);
-            Toy toy7 = new Toy("Дельфин", 9, 55);
+            Toy toy1 = new Toy("Робот", 2, 60);
+            Toy toy2 = new Toy("Медведь", 2, 20);
+            Toy toy3 = new Toy("Утка", 2, 74);
+            Toy toy4 = new Toy("Конструктор", 2, 82);
+            Toy toy5 = new Toy("Кукла Барби", 2, 35);
+            Toy toy6 = new Toy("Лото", 2, 48);
+            Toy toy7 = new Toy("Дельфин", 2, 55);
             Toy toy8 = new Toy("Пианино", 2, 90);
 
             ListToys listToys = new ListToys();
