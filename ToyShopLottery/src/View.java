@@ -39,6 +39,7 @@ public class View {
                     break;
                 case "4":
                     listPrize.printPrize(listToys);
+                    break;
                 case "0":
                     System.exit(0);
                 default:
